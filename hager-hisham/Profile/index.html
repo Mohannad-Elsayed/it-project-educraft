@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="style.css">
+	<title>Profile</title>
+</head>
+<body>
+	<section id="sidebar">
+		<a href="#" class="brand"> 
+			<i class='bx bxs-smile'></i> 
+			<span class="text">Edu Craft</span> 
+		</a>
+		<ul class="side-menu top">
+			<li>
+				<a href="#"> 
+					<i class='bx bxs-user'></i> 
+					<span class="text">Account</span> 
+				</a>
+			</li>
+			<li>
+				<a href="#" id="my-courses-link"> 
+					<i class='bx bxs-book-open' ></i> 
+					<span class="text">My Courses</span> 
+				</a>
+			</li>
+			<li>
+				<a href="#" target="_self" class="logout"> 
+					<i class='bx bxs-log-out-circle' ></i> 
+					<span class="text">Logout</span> 
+				</a>
+			</li>
+		</ul>
+	</section>
+	<section id="content">
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<a href="#" class="notification">
+				<i class='bx bxs-bell' ></i>
+				<span class="num">8</span>
+			</a>
+			<a href="#" class="profile">
+				<img src="images.jpg">
+			</a>
+		</nav>
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Profile</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Profile</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">Home</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<section id="account">
+				<div class="account-info">
+					<img src="images.jpg" alt="Profile Picture" class="profile-pic">
+					<form>
+						<label>Username</label>
+						<input type="text" placeholder="User">
+						<br>
+						<label>Email</label>
+						<input type="email" placeholder="user@example.com">
+						<br>
+						<label>Birth Date</label>
+						<input type="date" value="01/01/2000">
+						<br>
+						<label>Phone Number</label>
+						<input type="tel" placeholder="111-222-333">
+						<br>
+						<label>Country</label>
+						<select>
+							<option aria-placeholder="Country">Egypt</option>
+							<option value="Canada">Canada</option>
+							<option value="Egypt">Egypt</option>
+							<option value="France">France</option>
+							<option value="Germany">Germany</option>
+							<option value="India">India</option>
+							<option value="Japan">Japan</option>
+						</select>
+					</form>
+				</div>
+			</section>
+			<div id="my-courses-page" class="page">
+				<h2>My Courses</h2>
+				<ul>
+					<li>
+						<img src="intro to programming.png" alt="Course 1">
+						Introduction to Programming
+					</li>
+					<li>
+						<img src="html css.jpg" alt="Course 2">
+						Web Development with HTML and CSS
+					</li>
+					<li>
+						<img src="js language.png" alt="Course 3">
+						JavaScript Basics
+					</li>
+					<li>
+						<img src="py.png" alt="Course 4">
+						Python for Beginners
+					</li>
+					<li>
+						<img src="java.png" alt="Course 5">
+						Java Programming
+					</li>
+				</ul>
+			</div>
+		</main>
+	</section>
+	<script src="script.js"></script>
+</body>
+</html>

@@ -25,12 +25,13 @@
                       <li><a href="#">Home</a></li>
                       <li><a href="#">About</a></li>
                       <li><a href="#">setting</a></li>
-                      <li><a href="#">Clear chat</a></li>
+                      <li class="clear-chat" onclick="clearChat()"><a href="#">Clear chat</a></li>
                     </ul>
+                   
                   </div>
                 </div>
             </div>
-            <div class="body" >
+            <div class="body" id="chat" >
                 <div class="first_message">
                 <i class="fa-solid fa-circle-user"></i>
                 <p class="message">How can I help you</p> 
@@ -84,7 +85,11 @@
              } else {
                  menu.style.display = "block";
               }
-}
+      }
+      function clearChat() {
+                    var chat = document.getElementById("chat");
+                    chat.innerHTML = ""; // Clear chat content
+                }
         </script>
     </body>
 </html>

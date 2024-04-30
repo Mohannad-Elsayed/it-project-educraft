@@ -1,6 +1,12 @@
 const container = document.getElementById('container');
 const registerBtn = document.getElementById('register');
 const loginBtn = document.getElementById('login');
+const signInBtn = document.getElementById('signIn');
+
+localStorage.setItem("x", "false");
+signInBtn.addEventListener('click', () => {
+    localStorage.setItem("x", "true");
+});
 
 registerBtn.addEventListener('click', () => {
     container.classList.add("active");
@@ -85,7 +91,6 @@ form.addEventListener("submit", (e) => {
     }
 });
 
-const signInBtn = document.getElementById('signIn');
 
 
 registerBtn.addEventListener('click', () => {
@@ -102,8 +107,9 @@ registerBtn.addEventListener('click', () => {
     const password = passInput.value;
 
     // Store user credentials in local storage
-    localStorage.setItem('userEmail', 'user@example.com');
-    localStorage.setItem('userPassword', 'P@ssw0rd');
+    localStorage.setItem("userEmail", email);
+    localStorage.setItem("userPassword", password);
+    console.log(localStorage.getItem("userEmail"), "   here\n");
 
     // Optionally, you can add more validation logic here before storing the credentials
 });
@@ -116,8 +122,8 @@ signInBtn.addEventListener('click', () => {
     const password = passInput.value;
 
     // Retrieve user credentials from local storage
-    const storedEmail = localStorage.getItem('userEmail');
-    const storedPassword = localStorage.getItem('userPassword');
+    const storedEmail = localStorage.getItem("userEmail");
+    const storedPassword = localStorage.getItem("userPassword");
 
     if (email === storedEmail && password === storedPassword) {
         // Sign in successful
@@ -128,6 +134,7 @@ signInBtn.addEventListener('click', () => {
         console.log('Sign-in failed');
         // Display error message
         emailError.textContent = 'Invalid email or password';
+        console.log("invalid");
     }
 });
 

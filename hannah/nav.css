@@ -1,0 +1,78 @@
+:root{
+    --grad:linear-gradient(45deg,
+    #31293F,
+    #554D74,
+    #796EA8
+    ); 
+    --navhovertextDecoration:#ffffff2f;
+    --navFont:#14142b;
+    --navfonthover:rgb(0, 0, 0);
+    --underline:rgb(66, 64, 64);
+    --primary:#f5f2fa;
+    --secondary:#fff;
+    --font:#3a365b;
+    --fonthover:#0e0e14;
+    --myfont: system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+.dark-theme {
+    --grad:linear-gradient(45deg,
+    #31293F,
+    #554D74,
+    #796EA8
+    ); 
+    --navhovertextDecoration:#4643432f;
+    --underline:rgb(250, 252, 255);
+    --font:rgb(255, 255, 255);
+    --navFont:rgba(201, 201, 201, 0.884);
+    --navfonthover:rgb(255, 255, 255);
+    --primary:#14142b;
+    --secondary:#6e73ad;
+    --myfont: system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+nav {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between ;
+    align-items: center;
+    width: 800px;
+    height: 40px;
+    margin-left: 30px;
+    background-color: var(--primary);
+}
+
+nav a {
+    font-family: var(--myfont);
+    font-size: 20px;
+    color:var(--navFont);
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    padding: 10px 0px;
+}
+nav a:hover {
+    color: var( --navfonthover);
+    text-shadow: var(--navhovertextDecoration);
+}
+.search img {
+    height: 20px;
+    width: 20px;
+}   
+
+nav a::after {
+    content:"";
+    position: absolute;
+    background-color: var(--underline);
+    height: 3px;
+    width:0%;
+    left: 0;
+    bottom: -7px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+
+}
+

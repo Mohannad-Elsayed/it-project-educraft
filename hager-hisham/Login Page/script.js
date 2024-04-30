@@ -50,7 +50,7 @@ function createPass() {
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
     if (!passInput.value.match(passPattern)) {
-        return passField.classList.add("invalid"), passError.textContent = "Invali,";
+        return passField.classList.add("invalid"), passError.textContent = "Invalid, enter a valid password.";
     }
     passField.classList.remove("invalid"), passError.textContent = "";
 }
@@ -84,3 +84,77 @@ form.addEventListener("submit", (e) => {
         location.href = form.getAttribute("action");
     }
 });
+
+const signInBtn = document.getElementById('signIn');
+
+
+registerBtn.addEventListener('click', () => {
+    container.classList.add("active");
+});
+
+loginBtn.addEventListener('click', () => {
+    container.classList.remove("active");
+});
+
+// Register functionality
+registerBtn.addEventListener('click', () => {
+    const email = emailInput.value;
+    const password = passInput.value;
+
+    // Store user credentials in local storage
+    localStorage.setItem('userEmail', 'user@example.com');
+    localStorage.setItem('userPassword', 'P@ssw0rd');
+
+    // Optionally, you can add more validation logic here before storing the credentials
+});
+
+// Sign-in Functionality
+signInBtn.addEventListener('click', () => {
+    clearErrors();
+
+    const email = emailInput.value;
+    const password = passInput.value;
+
+    // Retrieve user credentials from local storage
+    const storedEmail = localStorage.getItem('userEmail');
+    const storedPassword = localStorage.getItem('userPassword');
+
+    if (email === storedEmail && password === storedPassword) {
+        // Sign in successful
+        console.log('Sign-in successful');
+        // Here you can redirect the user to another page or perform other actions
+    } else {
+        // Sign in failed
+        console.log('Sign-in failed');
+        // Display error message
+        emailError.textContent = 'Invalid email or password';
+    }
+});
+
+// Form Submission Validation
+form.addEventListener("submit", (e) => {
+    e.preventDefault(); //preventing form submitting
+    checkEmail();
+    createPass();
+    confirmPass();
+
+    //calling function on key up
+    emailInput.addEventListener("keyup", checkEmail);
+    passInput.addEventListener("keyup", createPass);
+    cPassInput.addEventListener("keyup", confirmPass);
+
+    if (
+        !emailField.classList.contains("invalid") &&
+        !passField.classList.contains("invalid") &&
+        !cPassField.classList.contains("invalid")
+    ) {
+        form.removeEventListener("submit", arguments.callee); //removing event listener after form is submitted
+        // location.href = form.getAttribute("action");
+    }
+});
+
+function clearErrors() {
+    emailError.textContent = '';
+    passError.textContent = '';
+    cPassError.textContent = '';
+}

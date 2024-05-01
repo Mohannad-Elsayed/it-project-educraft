@@ -102,6 +102,8 @@ signUpButton.addEventListener('click', () => {
         localStorage.setItem("userEmail", email);
         localStorage.setItem("userPassword", password);
         alert('User Registered Successfully. Please login.');
+        signInEmail.placeholder = email;
+        signInPass.placeholder = password;
     }
 });
 

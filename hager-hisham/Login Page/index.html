@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login.css">
   <title>Login Page</title>
 </head>
 
@@ -52,7 +52,7 @@
             <p class="error-text">Password don't match</p>
           </span>
         </div>
-        <button>Sign Up</button>
+        <input type="button" class="signup-button" value="Sign Up" style="cursor: pointer;">
       </form>
     </div>
     <div class="form-container sign-in">
@@ -64,14 +64,10 @@
           <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
         </div>
         <span>or use your email password</span>
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Password">
+        <input type="email" placeholder="Email [ex@ex.com]" class="email-login">
+        <input type="password" placeholder="Password [123]" class="pass-login">
         <a href="#">Forget Your Password?</a>
-        <a href="../../hager-ahmed/HTML/home.html">
-          <button id="signIn">
-            Sign In
-          </button>
-        </a>
+        <input type="button" value="Sign In" id="signIn" style="cursor: pointer;">
       </form>
     </div>
     <div class="toggle-container">

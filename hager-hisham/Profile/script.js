@@ -1,5 +1,8 @@
 const allSideMenu = document.querySelectorAll('#sidebar .side-menu.top li a');
-
+const logout = document.querySelector('.logout');
+logout.addEventListener('click', () => {
+    localStorage.setItem("x", "false");
+});
 allSideMenu.forEach(item => {
     const li = item.parentElement;
 
@@ -45,7 +48,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Hide the logout link initially
     var logoutLink = document.querySelector('#sidebar .side-menu.top li:last-child');
     logoutLink.style.display = "none";
-
+    // logoutLink.addEventListener('click', function () {
+    //     localStorage.setItem('x', 'false')l
+    // });
     const allSideMenu = document.querySelectorAll('#sidebar .side-menu.top li a');
 
     allSideMenu.forEach(item => {

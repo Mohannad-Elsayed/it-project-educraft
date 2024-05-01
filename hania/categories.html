@@ -49,7 +49,7 @@
 
             <li class="links"><a href="../hager-ahmed/HTML/home.html">Home</a></li>
             <li class="links"><a href="../yara/my-learning.html">My Courses</a></li>
-            <li class="links"><a href="#">Categories</a></li>
+            <li class="links"><a href="../hania/categories.html">Categories</a></li>
             <li class="links"><a href="uploadCourse.html">Upload Course</a></li>
             <li class="links"><a href="../hager-ahmed/HTML/home.html">About</a></li>
             <li class="links"><a href="../hager-hisham/Profile/index.html"><abbr title="My Profile"><i
@@ -450,6 +450,16 @@
                 clicked.classList.remove('fa-solid');
                 clicked.classList.add('fa-regular');
             }
+        }
+
+        // to course page
+        const courses = document.querySelectorAll('.course');
+        console.log(courses);
+        for (let i = 0; i < courses.length; i++) {
+            let course = courses[i];
+            course.addEventListener('click', function () {
+                window.location.href = '../mohannad/view-course/main.html';
+            });
         }
     </script>
 </body>

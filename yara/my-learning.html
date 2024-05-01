@@ -43,7 +43,7 @@
           <option class="category active" value="IT">IT & Software</option>
           <option class="category" value="BUS">Business</option>
           <option class="category" value="MARK">Marketing</option>
-          
+
         </select>
         <select class="select">
           <option>Prograss</option>
@@ -248,6 +248,15 @@
 
 
     });
+    // redirect to course page
+    const courses = document.querySelectorAll('.roww');
+    console.log(courses);
+    for (let i = 0; i < courses.length; i++) {
+      let course = courses[i];
+      course.addEventListener('click', function () {
+        window.location.href = '../mohannad/view-course/main.html';
+      });
+    }
 
   </script>
 

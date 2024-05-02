@@ -4,6 +4,7 @@
     #796EA8,
     #796EA8
     ); 
+    --copywrite:#1e1b25;
     --lightShadow:rgb(133, 111, 136);
     --darkShadow:rgb(34, 18, 39);
     --fadedFont:rgba(0, 0, 0, 0.534);
@@ -17,13 +18,17 @@
     --starTrack:rgb(171, 156, 211);
     --bar:rgb(114, 91, 155);
     --barTrack:rgba(73, 30, 175, 0.26);
+    --FB_Shadow:2px 2px 5px rgb(157, 156, 158),-2px -2px 10px rgb(141, 140, 141);
+    --FB_bg:#2b2336;
+    --FB_bgHover: white;
+    --FB_color:white; 
+    --FB_colorHover:black;
+    --FText-shadow:2px 2px 5px rgb(51, 37, 58),-2px -2px 10px rgb(51, 37, 58) ;
 }
 .dark-theme {
     --grad:linear-gradient(45deg,
-    #31293F,
-    #554D74,
-    #796EA8
-    ); 
+    #181736,#181736,#181736); 
+    --copywrite:rgba(255, 255, 255, 0.596);
     --lightShadow:rgb(111, 115, 136);
     --darkShadow:rgb(18, 22, 39);
     --fadedFont:rgba(255, 255, 255, 0.596);
@@ -37,6 +42,12 @@
     --starTrack:#fff8;
     --bar:gold;
     --barTrack:#ff02;
+    --FB_Shadow:2px 2px 5px rgb(157, 156, 158),-2px -2px 10px rgb(141, 140, 141);
+    --FB_bg:#D3D9E9;
+    --FB_bgHover: #ffffff;
+    --FB_color:rgb(51, 37, 58); 
+    --FB_colorHover:#000000;
+    --FText-shadow:2px 2px 5px rgb(201, 201, 201),-2px -2px 10px rgb(201, 201, 201) ;
 }
 * {
     margin: 0;
@@ -387,12 +398,18 @@ footer {
 }
 .footer-col h4{
     font-size: 25px;
+    margin-bottom: 10px;
+    margin-top: 15px;
 }
 
 .footer-col .abt {
     color:var(--fontFooter);
     margin-top: 20px;
 }
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
 footer ul {
     list-style: none;
 }
@@ -402,7 +419,7 @@ footer ul a{
     font-size: 20px;
 }
 footer ul a:hover{
-    text-shadow: 2px 2px 5px rgb(51, 37, 58),-2px -2px 10px rgb(51, 37, 58) ;
+    text-shadow: var(--FText-shadow);
 }
 .txt span {
     color: var(--fontFooter);
@@ -412,10 +429,10 @@ a.email-us {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #D3D9E9;
+    background-color: var(--FB_bg); 
+    color :var(--FB_color);
     padding: 20px;
     border-radius: 20px;
-    color: rgb(51, 37, 58);
     font-size: 15px;
     font-weight: 700;
     height: 25px;
@@ -429,29 +446,30 @@ a.email-us {
 }
 
 a.email-us:hover {
-    background-color: #2b2336;
-    color: rgb(247, 247, 247);
-    box-shadow: 2px 2px 5px rgb(51, 37, 58),-2px -2px 10px rgb(51, 37, 58) ;
+    background-color: var(--FB_bgHover);
+    color: var(--FB_colorHover);
+    box-shadow: var(--FB_Shadow);
     animation: bounce 2s linear;
 }
 
 .social-links a {
     border-radius:20px ;
-    color :var(--fontFooter);
-    background-color: #2b2336;
+    background-color: var(--FB_bg); 
+    color :var(--FB_color);
     padding: 12px;
     margin-bottom: 25px;
     margin-top: 10px;
 }
-.social-links a:hover {
-    background-color:#D3D9E9 ;
-    color:#2b2336;
-    box-shadow: 2px 2px 5px rgb(51, 37, 58),-2px -2px 10px rgb(51, 37, 58) ;
+.social-links a:hover { 
+    background-color: var(--FB_bgHover);
+    color: var(--FB_colorHover);
+    box-shadow: var(--FB_Shadow);
 }
+
 .social-links i {
     width: 18px;
 }
 
 .copywrite {
-    color: #1e1b25;
+    color: var(--copywrite);
 }

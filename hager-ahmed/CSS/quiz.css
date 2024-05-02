@@ -216,3 +216,19 @@ strong {
     color: rgb(214, 4, 4);
     font-weight: bold;
 }
+
+.back-to-course:hover {
+  background-color: var(--bg-lightc3);
+}
+
+.back-to-course {
+  font-family: var(--myfont);
+  text-decoration: none;
+  font-size: 16pt;
+  font-weight: 600;
+  background-color: #d1b5f6;
+  border-radius: 15px;
+  padding: 10px;
+  transition: all .2s ease;
+}
+

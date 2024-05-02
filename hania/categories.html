@@ -52,27 +52,47 @@
             <li class="links"><a href="../hania/categories.html">Categories</a></li>
             <li class="links"><a href="uploadCourse.html">Upload Course</a></li>
             <li class="links"><a href="../hager-ahmed/HTML/home.html">About</a></li>
-            <li class="links"><a href="../hager-hisham/Profile/index.html"><abbr title="My Profile"><i
-                            class="fa-solid fa-circle-user"></i></abbr></i></a></li>
+            <li class="links"><a href="#user"><abbr title="My Profile">
+                        <i class="fa-solid fa-circle-user" onclick="toggleSidebar()"></i></abbr></a></li>
 
         </ul>
 
 
     </div>
     <!-- end header -->
+    <!-- start sidebar -->
+    <div class="sidebar" id="sideBar">
+        <img src="imagestemp/OIP.jpeg" alt="userimage" />
+        <ul>
+            <li><a href="#">General</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Notifications</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Security</a></li>
+        </ul>
+        <span class="close-icon" onclick="toggleSidebar()"><i class="fa-solid fa-circle-xmark"></i></span>
+    </div>
+    <!-- end sidebar -->
+    <!-- start popup -->
+    <div class="popup" id="popup">
+        <i class="fa-solid fa-circle-check"></i>
+        <p>Added to Cart!</p>
+        <button type="button" onclick="closePopup()">Ok</button>
+        <button type="button"><i class="fa-solid fa-cart-shopping"></i>View Cart</button>
+    </div>
+    <!-- end popup -->
     <!-- start main -->
     <div class="cont">
-
-        <!-- start data science page -->
-        <h2>Data Science Courses</h2>
         <div class="search">
             <p class="sort">Sort by:</p>
-            <select>
-                <option>Most Popular</option>
-                <option>New</option>
-                <option>Trending</option>
+            <select id="select-sort">
+                <option value="mostPopular">Most Popular</option>
+                <option value="new">New</option>
             </select>
         </div>
+        <!-- start data science page -->
+        <h2>Data Science Courses</h2>
         <div class="page">
             <div class="course">
                 <img src="imagestemp/datasci.jpeg" alt="">
@@ -85,18 +105,8 @@
 
                 <div class="addfavs">
                     <button type="submit" class="addtocart" onclick="openPopup()">Add to Cart</button>
-                    <div class="popup" id="popup">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <p>Added to Cart!</p>
-                        <button type="button" onclick="closePopup()">Ok</button>
-                        <button type="button"><i class="fa-solid fa-cart-shopping"></i>View Cart</button>
-                    </div>
-                    <div class="popup" id="popup">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <p>Added to Cart!</p>
-                        <button type="button" onclick="closePopup()">Ok</button>
-                        <button type="button"><i class="fa-solid fa-cart-shopping"></i>View Cart</button>
-                    </div>
+
+
                     <i class="fa-regular fa-heart hearticon"></i>
                 </div>
 
@@ -113,12 +123,7 @@
                 </div>
                 <div class="addfavs">
                     <button type="submit" class="addtocart" onclick="openPopup()">Add to Cart</button>
-                    <div class="popup" id="popup">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <p>Added to Cart!</p>
-                        <button type="button" onclick="closePopup()">Ok</button>
-                        <button type="button"><i class="fa-solid fa-cart-shopping"></i>View Cart</button>
-                    </div>
+
                     <i class="fa-regular fa-heart hearticon"></i>
                 </div>
 
@@ -134,12 +139,7 @@
                 </div>
                 <div class="addfavs">
                     <button type="submit" class="addtocart" onclick="openPopup()">Add to Cart</button>
-                    <div class="popup" id="popup">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <p>Added to Cart!</p>
-                        <button type="button" onclick="closePopup()">Ok</button>
-                        <button type="button"><i class="fa-solid fa-cart-shopping"></i>View Cart</button>
-                    </div>
+
                     <i class="fa-regular fa-heart hearticon"></i>
                 </div>
 
@@ -155,12 +155,7 @@
                 </div>
                 <div class="addfavs">
                     <button type="submit" class="addtocart" onclick="openPopup()">Add to Cart</button>
-                    <div class="popup" id="popup">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <p>Added to Cart!</p>
-                        <button type="button" onclick="closePopup()">Ok</button>
-                        <button type="button"><i class="fa-solid fa-cart-shopping"></i>View Cart</button>
-                    </div>
+
                     <i class="fa-regular fa-heart hearticon"></i>
                 </div>
 
@@ -172,14 +167,6 @@
 
         <!-- start web development page -->
         <h2>Web Development Courses</h2>
-        <div class="search">
-            <p class="sort">Sort by:</p>
-            <select>
-                <option>Most Popular</option>
-                <option>New</option>
-                <option>Trending</option>
-            </select>
-        </div>
         <div class="page">
             <div class="course">
                 <img src="imagestemp/Premium Vector _ Software development, programming language, coding.jpeg" alt="">
@@ -190,12 +177,7 @@
                 </div>
                 <div class="addfavs">
                     <button type="submit" class="addtocart" onclick="openPopup()">Add to Cart</button>
-                    <div class="popup" id="popup">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <p>Added to Cart!</p>
-                        <button type="button" onclick="closePopup()">Ok</button>
-                        <button type="button"><i class="fa-solid fa-cart-shopping"></i>View Cart</button>
-                    </div>
+
                     <i class="fa-regular fa-heart hearticon"></i>
                 </div>
 
@@ -211,12 +193,7 @@
                 </div>
                 <div class="addfavs">
                     <button type="submit" class="addtocart" onclick="openPopup()">Add to Cart</button>
-                    <div class="popup" id="popup">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <p>Added to Cart!</p>
-                        <button type="button" onclick="closePopup()">Ok</button>
-                        <button type="button"><i class="fa-solid fa-cart-shopping"></i>View Cart</button>
-                    </div>
+
                     <i class="fa-regular fa-heart hearticon"></i>
                 </div>
 
@@ -233,12 +210,7 @@
                 </div>
                 <div class="addfavs">
                     <button type="submit" class="addtocart" onclick="openPopup()">Add to Cart</button>
-                    <div class="popup" id="popup">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <p>Added to Cart!</p>
-                        <button type="button" onclick="closePopup()">Ok</button>
-                        <button type="button"><i class="fa-solid fa-cart-shopping"></i>View Cart</button>
-                    </div>
+
                     <i class="fa-regular fa-heart hearticon"></i>
                 </div>
 
@@ -254,12 +226,7 @@
                 </div>
                 <div class="addfavs">
                     <button type="submit" class="addtocart" onclick="openPopup()">Add to Cart</button>
-                    <div class="popup" id="popup">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <p>Added to Cart!</p>
-                        <button type="button" onclick="closePopup()">Ok</button>
-                        <button type="button"><i class="fa-solid fa-cart-shopping"></i>View Cart</button>
-                    </div>
+
                     <i class="fa-regular fa-heart hearticon"></i>
                 </div>
                 <button class="buynow">Buy Now</button>
@@ -269,14 +236,6 @@
         <!-- end web development page -->
         <!-- start mobile devlopment page -->
         <h2>Mobile Development Courses</h2>
-        <div class="search">
-            <p class="sort">Sort by:</p>
-            <select>
-                <option>Most Popular</option>
-                <option>New</option>
-                <option>Trending</option>
-            </select>
-        </div>
         <div class="page mobdev">
             <div class="course">
                 <img src="imagestemp/Premium Vector _ App development concept with phone and coding languages.jpeg"
@@ -288,12 +247,7 @@
                 </div>
                 <div class="addfavs">
                     <button type="submit" class="addtocart" onclick="openPopup()">Add to Cart</button>
-                    <div class="popup" id="popup">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <p>Added to Cart!</p>
-                        <button type="button" onclick="closePopup()">Ok</button>
-                        <button type="button"><i class="fa-solid fa-cart-shopping"></i>View Cart</button>
-                    </div>
+
                     <i class="fa-regular fa-heart hearticon"></i>
                 </div>
 
@@ -309,12 +263,7 @@
                 </div>
                 <div class="addfavs">
                     <button type="submit" class="addtocart" onclick="openPopup()">Add to Cart</button>
-                    <div class="popup" id="popup">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <p>Added to Cart!</p>
-                        <button type="button" onclick="closePopup()">Ok</button>
-                        <button type="button"><i class="fa-solid fa-cart-shopping"></i>View Cart</button>
-                    </div>
+
                     <i class="fa-regular fa-heart hearticon"></i>
                 </div>
 
@@ -330,12 +279,7 @@
                 </div>
                 <div class="addfavs">
                     <button type="submit" class="addtocart" onclick="openPopup()">Add to Cart</button>
-                    <div class="popup" id="popup">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <p>Added to Cart!</p>
-                        <button type="button" onclick="closePopup()">Ok</button>
-                        <button type="button"><i class="fa-solid fa-cart-shopping"></i>View Cart</button>
-                    </div>
+
                     <i class="fa-regular fa-heart hearticon"></i>
                 </div>
 
@@ -419,6 +363,27 @@
             }
         }
         // end dark mode
+        // show sidebar
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sideBar");
+            sidebar.classList.toggle("active");
+        }
+        // change order function
+        function changeOrder(order) {
+            var courses = document.querySelectorAll('.course');
+
+            if (order === 'mostPopular') {
+                courses.forEach((course, index) => course.style.order = index);
+            } else if (order === 'new') {
+                courses.forEach((course, index) => course.style.order = -index);
+            } else {
+                courses.forEach(course => course.style.order = 0);
+            }
+        }
+
+        document.getElementById('select-sort').addEventListener('change', function () {
+            changeOrder(this.value);
+        });
         //start popup
         let popup = document.getElementById("popup");
         function openPopup() {

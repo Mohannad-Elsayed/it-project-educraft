@@ -83,7 +83,7 @@ for (let i = 0; i<numericInput4.length; i++){
     });
 }
 
-// get the element to be changed
+// get the element to be changed (the card)
 const card = document.getElementById('card');
 function cardStyle(event) {
     const mode = event.target.value;
@@ -194,7 +194,7 @@ currencySelect.addEventListener('change', function() {
         document.querySelector('.hidden-by-default').classList.remove('show');
         allset.classList.remove('show');
         captcha.classList.remove('show');
-        console.log(captcha.classList);
+        // console.log(captcha.classList);
         submitButton.disabled = true;
     }
 });
@@ -217,8 +217,9 @@ submitButton.addEventListener('click', (event) => {
         const form = document.getElementById('form');
         // one last check that the user will pay
         if (confirm("You'll be charged $29.99. Confirm?")){
-            window.location.href = 'exp.html';
-            form.submit();
+            // form.submit();
+            alert('You have added the course successfully!\n Happy Learning <3;')
+            window.location.href = '../../yara/my-learning.html';
         }
     }
     // to display custom validity message

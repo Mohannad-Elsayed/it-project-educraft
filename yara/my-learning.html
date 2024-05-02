@@ -1,7 +1,10 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <title>my learning</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Learning</title>
   <link rel="stylesheet" href="my learning/all.min.css" />
   <link rel="stylesheet" href="my learning.css">
   <link id="footer-style" rel="stylesheet" href="footer.css">
@@ -9,18 +12,20 @@
 
 <body>
   <header>
-    <div class="containerr">
+    <div class="container">
       <div class="header">
-        <h1>My learning</h1>
+        <h1>My Learning</h1>
       </div>
       <nav class="nav">
         <i class="fa-regular fa-moon" id="iconmoon"></i>
         <ul class="ul" style="list-style-type: none;">
-          <li class="li"><a href="#"><strong>All courses</strong></a></li>
-          <li class="li"><a href="#"><strong>To do list</strong></a></li>
-          <li class="li"><a href="#"><strong>Schedule</strong></a></li>
-          <i class="fas fa-search"> </i>
-          <input class="search_input" type="search" placeholder="search my course">
+          <li class="li"><a href="../hania/categories.html"><strong>All courses</strong></a></li>
+          <li class="li"><a href="../nada/schedule&todo.html"><strong>To do list</strong></a></li>
+          <li class="li"><a href="../nada/schedule&todo.html"><strong>Schedule</strong></a></li>
+          <div class="big_search">
+            <input class="search_input" type="search" id="searchInput" placeholder="Search my course">
+            <button class="searchButton" id="searchButton"><i class="fas fa-search"> </i></button>
+          </div>
         </ul>
       </nav>
     </div>
@@ -28,44 +33,43 @@
   <section class="all_web">
     <div class="container_body">
       <div class="center_text">
-        <h2>My courses</h2>
+        <h2>My Courses</h2>
       </div>
       <p class="paragraph">Sort by</p>
       <div class="all_select">
         <select class="select">
-          <option>Recently_Accessed</option>
-          <option>Recently_Enrolled</option>
-          <option>Title:A-ti-Z</option>
-          <option>Title:Z-ti-A</option>
+          <option>Recently Accessed</option>
+          <option>Recently Enrolled</option>
+          <option>Title: A-to-Z</option>
+          <option>Title: Z-to-A</option>
         </select>
         <select class="select cat">
           <option>Categories</option>
           <option class="category active" value="IT">IT & Software</option>
           <option class="category" value="BUS">Business</option>
           <option class="category" value="MARK">Marketing</option>
-
         </select>
         <select class="select">
-          <option>Prograss</option>
+          <option>Progress</option>
           <option>Not Started</option>
-          <option>In Prograss</option>
+          <option>In Progress</option>
         </select>
         <select class="select">
           <option>Instructor</option>
           <option>Ahmed El Mohandes</option>
           <option>Ammer Hassan</option>
-          <option>Aniket jain</option>
+          <option>Aniket Jain</option>
           <option>Anton Voroniuk</option>
           <option>Clara Lannoy</option>
           <option>Cyber Quince</option>
-          <option>Ejiro lgho</option>
+          <option>Ejiro Igho</option>
         </select>
         <p class="paragraph">Reset</p>
       </div>
       <div class="courses">
         <div class="big_row1 card IT">
           <div class="roww">
-            <img src="html.jfif" alt="html course">
+            <img src="html.jfif" alt="HTML course">
             <p class="course_text">Web Development Wizardry: HTML & CSS Course for Beginners.</p>
           </div>
           <div class="roww">
@@ -73,18 +77,18 @@
             <p class="course_text">Java Network Programming - Mastering TCP/IP : CJNP+ 2024 JVA</p>
           </div>
           <div class="roww">
-            <img src="c.jfif" alt="c course">
+            <img src="c.jfif" alt="C course">
             <p class="course_text">The Complete Introduction to C++ Programming</p>
           </div>
           <div class="roww">
-            <img src="css and php.jfif" alt="php course">
+            <img src="css and php.jfif" alt="PHP course">
             <p class="course_text">JavaScript And PHP Programming Complete Course</p>
           </div>
         </div>
         <div class="big_row2 card BUS">
           <div class="roww">
             <img src="haker.jfif" alt="hack course">
-            <p class="course_text">Ethically Hack the Planet Part 3</p>
+            <p class="course_text">Agile Leadership: Become An Agile Leader</p>
           </div>
           <div class="roww">
             <img src="web.jfif" alt="web course">
@@ -121,15 +125,6 @@
     </div>
   </section>
 
-  <head>
-    <title>Footer Design</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-
-  </head>
   <footer class="footer">
     <div class="container">
       <div class="row">
@@ -146,9 +141,7 @@
           </div>
           <p style="font-size: 1.2em; margin-bottom: 5px; margin-top: 10px;"><b>About us: </b></p>
           <p style="color: var(--fg-lightc6)">Empowering learners with innovative education. Explore, create,
-            and excel
-            with our engaging
-            courses and resources.</p>
+            and excel with our engaging courses and resources.</p>
         </div>
 
         <div class="footer-col" style="margin-left: 40px;">
@@ -186,6 +179,7 @@
       © 2024 EduCraft. All rights reserved. Explore innovative education and shape your future with us.
     </p>
   </footer>
+
   <script src="https://kit.fontawesome.com/0ede2dd129.js" crossorigin="anonymous"></script>
   <script>
     const footer = document.getElementById('footer-style');
@@ -209,7 +203,6 @@
         icon.classList.add("fa-moon");
       }
 
-
       document.querySelector("body").classList.toggle("body_dark");
       document.querySelector("h2").classList.toggle("h2_dark");
       document.querySelector(".header").classList.toggle("header-dark");
@@ -217,13 +210,11 @@
       document.querySelector(".ul").classList.toggle("ul_dark");
       document.querySelector(".nav").classList.toggle("nav_dark");
 
-
       const allSelectBoxes = document.querySelectorAll(".select");
       for (let i = 0; i < allSelectBoxes.length; i++) {
         const selectBox = allSelectBoxes[i];
         selectBox.classList.toggle("select_dark");
       }
-
 
       const allTextBoxes = document.querySelectorAll(".course_text");
       for (let i = 0; i < allTextBoxes.length; i++) {
@@ -231,10 +222,9 @@
         textBox.classList.toggle("course_text_dark");
       }
     }
+
     let select = document.querySelector('.cat');
-
     let card = document.querySelectorAll('.card');
-
 
     select.addEventListener("change", function (event) {
       //value selected by clicking
@@ -245,23 +235,21 @@
           c.classList.remove("hide");
         };
       });
-
-
     });
-    // redirect to course page
-    const courses = document.querySelectorAll('.roww');
-    console.log(courses);
-    for (let i = 0; i < courses.length; i++) {
-      let course = courses[i];
-      course.addEventListener('click', function () {
-        window.location.href = '../mohannad/view-course/main.html';
+
+    document.querySelector('.searchButton').addEventListener('click', function () {
+      var searchInput = document.getElementById('searchInput').value.toLowerCase();
+      var courses = document.querySelectorAll('.course_text');
+      courses.forEach(function (course) {
+        var courseName = course.innerText.toLowerCase();
+        if (courseName.includes(searchInput)) {
+          course.parentNode.style.display = 'block';
+        } else {
+          course.parentNode.style.display = 'none';
+        }
       });
-    }
-
+    });
   </script>
-
-
-
 </body>
 
 </html>

@@ -1,4 +1,9 @@
 :root {
+    --grad:linear-gradient(45deg,
+    #796EA8,
+    #796EA8,
+    #796EA8
+    ); 
     --lightShadow:rgb(133, 111, 136);
     --darkShadow:rgb(34, 18, 39);
     --fadedFont:rgba(0, 0, 0, 0.534);
@@ -14,6 +19,11 @@
     --barTrack:rgba(73, 30, 175, 0.26);
 }
 .dark-theme {
+    --grad:linear-gradient(45deg,
+    #31293F,
+    #554D74,
+    #796EA8
+    ); 
     --lightShadow:rgb(111, 115, 136);
     --darkShadow:rgb(18, 22, 39);
     --fadedFont:rgba(255, 255, 255, 0.596);
@@ -314,15 +324,10 @@ hr{
 
 /* footer */
 footer {
-    background:linear-gradient(45deg,
-    #31293F,
-    #554D74,
-    #796EA8
-    ); 
+    background: var(--grad);
     bottom: 0;
     width:100%;
     height:300px;
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -450,10 +455,3 @@ a.email-us:hover {
 .copywrite {
     color: #1e1b25;
 }
-
-
-
-
-
-
-

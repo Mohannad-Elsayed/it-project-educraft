@@ -249,6 +249,16 @@
         }
       });
     });
+
+    // to course page
+    const courses = document.querySelectorAll('.roww');
+    console.log(courses);
+    for (let i = 0; i < courses.length; i++) {
+      let course = courses[i];
+      course.addEventListener('click', function () {
+        window.location.href = '../mohannad/view-course/main.html';
+      });
+    }
   </script>
 </body>
 

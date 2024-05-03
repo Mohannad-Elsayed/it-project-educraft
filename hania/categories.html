@@ -288,6 +288,8 @@
             </div>
         </div>
         <!-- end mobile devlopment page -->
+
+
         <!-- start footer -->
     </div>
     <footer class="footer">
@@ -417,11 +419,18 @@
             }
         }
 
-        // to course page
-        const courses = document.querySelectorAll('.course');
-        console.log(courses);
-        for (let i = 0; i < courses.length; i++) {
-            let course = courses[i];
+        // to course page, enrollments
+        const buy = document.querySelectorAll('.buynow');
+        const tocourse = document.querySelectorAll('.course img');
+        // console.log(buy);
+        for (let i = 0; i < buy.length; i++) {
+            let course = buy[i];
+            course.addEventListener('click', function () {
+                window.location.href = '../mohannad/payment-enrollment/main.html';
+            });
+        }
+        for (let i = 0; i < tocourse.length; i++) {
+            let course = tocourse[i];
             course.addEventListener('click', function () {
                 window.location.href = '../mohannad/view-course/main.html';
             });

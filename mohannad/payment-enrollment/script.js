@@ -1,7 +1,6 @@
 //  global root element to access from anywhere in the code
 const root = document.documentElement;
 document.getElementById('currency').value = 'none'; //make default selection
-// document.querySelector('.hidden-by-default').classList.toggle('show');
 
 // to validate fields 
 const numericInput2 = document.querySelectorAll('.visa-2-input');
@@ -32,6 +31,7 @@ for (let i = 0; i<2; i++){
                     previousSibling.select();
                 }
             }
+            // if it's the end of the field move to the next one
             if (
                 (event.target.value.length === 2 && !(event.key <= "0" || "9" <= event.key)) ||
                 (event.code === "ArrowRight" &&
